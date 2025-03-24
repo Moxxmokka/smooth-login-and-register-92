@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +97,55 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-b from-gray-50 to-gray-100 text-foreground min-h-screen;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .auth-form-container {
+    @apply relative w-full max-w-md p-8 rounded-lg shadow-lg bg-white backdrop-blur-md bg-opacity-95 border border-gray-200;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .auth-input {
+    @apply w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-form-accent focus:border-transparent transition-all duration-200;
+  }
+
+  .auth-button {
+    @apply w-full py-3 rounded-md bg-form-DEFAULT text-white font-medium hover:bg-opacity-90 transition-all duration-200 flex items-center justify-center;
+  }
+
+  .accent-button {
+    @apply w-full py-3 rounded-md bg-form-accent text-form-DEFAULT font-medium hover:bg-opacity-90 transition-all duration-200;
+  }
+
+  .glass-card {
+    @apply bg-white bg-opacity-60 backdrop-blur-md border border-gray-200 rounded-lg shadow-lg;
+  }
+
+  .form-step-indicator {
+    @apply flex justify-center space-x-2 my-4;
+  }
+
+  .form-step-dot {
+    @apply h-2.5 w-2.5 rounded-full bg-gray-300 transition-all duration-300;
+  }
+
+  .form-step-dot-active {
+    @apply bg-form-DEFAULT w-8;
+  }
+
+  .toggle-container {
+    @apply flex bg-gray-100 p-1 rounded-full my-4;
+  }
+  
+  .toggle-button {
+    @apply flex-1 py-2 px-4 text-center text-gray-600 font-medium rounded-full transition-all duration-200;
+  }
+  
+  .toggle-button-active {
+    @apply bg-form-DEFAULT text-white;
   }
 }
