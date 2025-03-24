@@ -114,11 +114,11 @@
   }
 
   .auth-button {
-    @apply w-full py-3 rounded-md bg-form-DEFAULT text-white font-medium hover:bg-opacity-90 transition-all duration-200 flex items-center justify-center;
+    @apply w-full py-3 rounded-md bg-[#234034] text-white font-medium hover:bg-opacity-90 transition-all duration-200 flex items-center justify-center;
   }
 
   .accent-button {
-    @apply w-full py-3 rounded-md bg-form-accent text-form-DEFAULT font-medium hover:bg-opacity-90 transition-all duration-200;
+    @apply w-full py-3 rounded-md bg-[#d8f44c] text-[#234034] font-medium hover:bg-opacity-90 transition-all duration-200;
   }
 
   .glass-card {
@@ -134,7 +134,7 @@
   }
 
   .form-step-dot-active {
-    @apply bg-form-DEFAULT w-8;
+    @apply bg-[#234034] w-8;
   }
 
   .toggle-container {
@@ -146,6 +146,6 @@
   }
   
   .toggle-button-active {
-    @apply bg-form-DEFAULT text-white;
+    @apply bg-[#234034] text-white;
   }
 }
